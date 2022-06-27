@@ -80,7 +80,10 @@ function indent() {
 # done
 
 # ls -R $BUILD_DIR/.apt/
-ls -l $BUILD_DIR/.apt/usr/share/
+# ls -l $BUILD_DIR/.apt/usr/share/
+cp -r /usr/share/cmake-3.22 $BUILD_DIR/usr/share/cmake-3.22
+echo "---> copied"
+
 # apt list --installed
 # dpkg -L cmake
 
