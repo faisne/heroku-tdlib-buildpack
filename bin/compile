@@ -94,7 +94,7 @@ cd build
 export CXXFLAGS="-stdlib=libc++"
 
 echo "--> this far"
-ls /usr/share/cmake*
+export CMAKE_ROOT=/usr/share/cmake-3.22
 
 CC=$BUILD_DIR/.apt/usr/bin/clang CXX=$BUILD_DIR/.apt/usr/bin/clang++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
 cmake --build . --target prepare_cross_compiling
