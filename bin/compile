@@ -80,7 +80,7 @@ function indent() {
 # done
 
 # ls -R $BUILD_DIR/.apt/
-ls -l $BUILD_DIR/.apt/
+ls -l $BUILD_DIR/.apt/usr/share/
 # apt list --installed
 # dpkg -L cmake
 
