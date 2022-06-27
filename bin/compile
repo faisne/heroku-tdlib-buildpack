@@ -34,7 +34,7 @@ function indent() {
 
 echo "finding php"
 ls -l $BUILD_DIR/.apt/usr/bin/php*
-ls -l $BUILD_DIR/.apt/etc/bin/php*
+ls -l /usr/bin/php*
 exit 0
 
 # ls -R $BUILD_DIR/.apt/
