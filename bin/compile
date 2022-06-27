@@ -79,8 +79,8 @@ function indent() {
 #   dpkg -x $DEB $BUILD_DIR/.apt/
 # done
 
-ls -R $BUILD_DIR/.apt/
-
+# ls -R $BUILD_DIR/.apt/
+ls -l $BUILD_DIR/.apt/
 # apt list --installed
 # dpkg -L cmake
 
@@ -93,9 +93,8 @@ mkdir build
 cd build
 export CXXFLAGS="-stdlib=libc++"
 
-echo "--> this far"
-echo $CMAKE_ROOT
-export CMAKE_ROOT=/usr/share/cmake-3.22
+#echo $CMAKE_ROOT
+#export CMAKE_ROOT=/usr/share/cmake-3.22
 
 CC=$BUILD_DIR/.apt/usr/bin/clang CXX=$BUILD_DIR/.apt/usr/bin/clang++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
 cmake --build . --target prepare_cross_compiling
